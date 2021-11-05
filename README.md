@@ -1,8 +1,9 @@
 # Trabajo practico de Informatica 2
 ## To do list:
-- Elección del sistema a modelar. 
+- Sistema a modelar: Control de movimiento de aspiradora.
 
-- Diagrama de máquina de estado y memoria descriptiva
+- Memoria descriptiva:
+### El sistema funciona con un sencillo control movimiento, reconociendo obstaculos con un sensor de proximidad, corrigiendo (siempre con rotaciones de 30º a la derecha)
 
 - Primer versión de código
 
