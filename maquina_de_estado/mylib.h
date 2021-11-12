@@ -24,7 +24,7 @@ estados f_espera(st_datos); //Se le pasa una estructura de datos y devuelve un e
 estados f_avanzar(st_datos); /*Avanza hasta que detecta un obstaculo, baja la bateria
  o termina de recorrer la superficie determinada en el config y devuelve estados 2 , 3 o 4*/
 estados f_cargar(st_datos);//Regresa a la plataforma de carga y devuelve el estado 1
-void f_recall(st_datos);/*Regresa a la plataforma de carga para esperar otro inicio.(Se apaga)*/
+estados f_recall(st_datos);/*Regresa a la plataforma de carga para esperar otro inicio.(Se apaga)*/
 
 
 
