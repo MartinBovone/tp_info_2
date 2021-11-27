@@ -8,13 +8,14 @@ typedef enum {
     corregir = 2;
     cargar = 3;
     recall= 4; //regresa a la plataforma de carga cuando termina de mapear
-}estados:
+}estados;
 
 
 typedef struct {
+    unsigned char on_base; //1 si está en la plataforma inicial de carga.
     unsigned char bateria; //0--100%
     unsigned char obs; //0 libre , 1 obstaculo
-
+    unsigned char r_completo;//0 queda mapa por recorrer , 1 recorrido completo.
 }st_datos;
 
 //prototipos

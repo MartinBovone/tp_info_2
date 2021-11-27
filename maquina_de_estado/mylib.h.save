@@ -7,14 +7,15 @@ typedef enum {
     avanzar = 1;
     corregir = 2;
     cargar = 3;
-    recall= 4; //regresa a la plataforma de carga cuando termina de mapear 
-}estados:
+    recall= 4; //regresa a la plataforma de carga cuando termina de mapear
+}estados;
 
 
 typedef struct {
+    unsigned char on_base; //1 si está en la plataforma inicial de carga.
     unsigned char bateria; //0--100%
     unsigned char obs; //0 libre , 1 obstaculo
-
+    unsigned char r_completo;//0 queda mapa por recorrer , 1 recorrido completo.
 }st_datos;
 
 //prototipos
@@ -23,8 +24,8 @@ st_datos f_inicio(void);//Lee el archivo de configuracion que deberia tener el m
 estados f_espera(st_datos); //Se le pasa una estructura de datos y devuelve un estado
 estados f_avanzar(st_datos); /*Avanza hasta que detecta un obstaculo, baja la bateria
  o termina de recorrer la superficie determinada en el config y devuelve estados 2 , 3 o 4*/
-estados f_cargar(st_datos);//Regresa a la plataforma de carga y devuelve el estado 1 
-void f_recall(st_datos);//
+estados f_cargar(st_datos);//Regresa a la plataforma de carga y devuelve el estado 1
+estados f_recall(st_datos);/*Regresa a la plataforma de carga para esperar otro inicio.(Se apaga)*/
 
 
 
