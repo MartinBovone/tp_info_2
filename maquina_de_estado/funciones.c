@@ -25,15 +25,20 @@ estados f_espera(st_datos){
 }
 
 estados f_avanzar(st_datos){
-
+    int contador=0;
     while(1){
         if(st_datos.obs) return corregir;
         if(st_datos.bateria<15) return cargar;
         if(st_datos.r_completo) return recall;
         /*Esta parte del codigo luego de pasar por las condiciones para pasar de estado
         deberia permitir que la aspiradora avance ya que no cambia de estado*/
+        if (contador>0){
+                system("cls");
+                contador = 0;
+        }
         printf("\n\tAvanzando");
-        system("cls");
+        contador ++;
+
 
     }
 }
